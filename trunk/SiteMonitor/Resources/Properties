@@ -1,3 +1,5 @@
+WOPort = 55555
+
 # OGNL
 ognl.helperFunctions=true
 ognl.inlineBindings=true
