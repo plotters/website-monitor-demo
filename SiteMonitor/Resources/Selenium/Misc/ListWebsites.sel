@@ -1,0 +1,12 @@
+|open|/wa/Selenium/cleanup||
+|assertTextPresent|succeeded||
+
+|open|/wa/Selenium/createTestWebsite||
+|assertTextPresent|succeeded||
+
+|open|/wa/||
+|assertTextPresent|Test Website||
+|assertTextPresent|http://www.google.com||
+|assertElementPresent|//a[contains(text(), 'Edit')]
+|assertElementPresent|//a[contains(text(), 'Delete')]
+|assertElementPresent|//a[contains(text(), 'Check')]
