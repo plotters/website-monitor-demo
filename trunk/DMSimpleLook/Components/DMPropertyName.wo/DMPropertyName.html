@@ -1,0 +1,21 @@
+<wo:if condition = "$hasPropertyName"><wo:if condition = "$displayRequiredMarker"><span class="required">*</span></wo:if><span class="required" omitTags="$hasNoErrors"><wo:str value = "$displayNameForProperty" /></span></wo:if><wo:if condition = "$d2wDebuggingEnabled">
+  <a onmouseout = "this.innerHTML=this.innerHTML.replace('visibility: visible;','visibility: hidden;');" onmouseover = "this.innerHTML=this.innerHTML.replace('visibility: hidden;','visibility: visible;');">
+    ?
+    <span onclick = "this.style.visibility='hidden'; return false;" style = "position:absolute;visibility: hidden;">
+      <table border = "1" onclick = "this.style.visibility='hidden'; return false;" bgcolor = "white">
+        <webobject name = "ContextDictionaryForPropertyKeyAllKeysSortAscToString">
+          <tr>
+            <td>
+              <b>
+                <webobject name = "CurrentKey"></webobject>
+              </b>
+            </td>
+            <td>
+              <webobject name = "CurrentValue"></webobject>
+            </td>
+          </tr>
+        </webobject>
+      </table>
+    </span>
+  </a>
+</wo:if>

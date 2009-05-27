@@ -1,0 +1,32 @@
+<wo:WOSwitchComponent WOComponentName = "$d2wContext.innerPageWrapperName">
+<wo:ERDDebuggingHelp d2wContext = "$d2wContext"/>
+<wo:DMErrorPanel errorMessages = "$errorMessages" extraErrorMessage = "$errorMessage"/>
+<wo:form disabled = "$~!d2wContext.hasForm" action = "$nextPageAction" enctype = "$d2wContext.formEncoding">
+	<wo:if condition = "$message">
+		<p><wo:localized escapeHTML = "$false" templateString = "$message" object = "$d2wContext"/></p>
+	</wo:if>
+	<wo:if condition = "$showExplanationComponent">
+		<wo name = "ExplanationComponent" />
+	</wo:if>
+	<wo:if condition = "$hasNextPage">
+		<div class = "buttons">
+			<wo:if condition = "$hasBranchChoices">
+				<wo:loop list = "$branchChoices" item = "$branch">
+					<wo:link id = "$branchName" action = "$nextPageAction" string = "$branchLinkLabel" />&nbsp;
+				</wo:loop>
+			</wo:if>
+			<wo:else>
+				<wo:if condition = "$d2wContext.hasForm">
+					<wo name="Button"/> 
+				</wo:if>
+				<wo:else>
+					<wo:link action = "$nextPageAction" string = "$d2wContext.continueLinkLabel"/>
+				</wo:else>
+			</wo:else>
+			<wo:if condition = "$hasCancelPage">
+				<wo:localized value = "String.or" />&nbsp;<wo:link action = "$cancelAction" string = "$session.localizer.Link.back"/>
+			</wo:if>
+		</div>
+	</wo:if>
+</wo:form>
+</wo:WOSwitchComponent>

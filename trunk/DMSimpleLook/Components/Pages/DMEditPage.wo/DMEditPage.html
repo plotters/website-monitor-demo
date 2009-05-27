@@ -1,0 +1,22 @@
+<wo:WOSwitchComponent WOComponentName = "$d2wContext.innerPageWrapperName">
+	<wo:ERDDebuggingHelp d2wContext = "$d2wContext" />
+   	<wo:if condition = "$message">
+		<p><wo:str value = "$message" escapeHTML = "$false" /></p>
+	</wo:if>
+    <webobject name = "Form">
+	    <wo name = "ErrorPanel" />
+        <wo:loop list = "$displayPropertyKeys" item = "$propertyKey">
+       	  <div class="$propertyDivCssClass" id="$propertyKeyID">
+            <wo:not condition = "$d2wContext.hidePropertyName">
+            	<label><wo:DMPropertyName localContext = "$d2wContext" />:</label>
+            </wo:not>
+            <wo name = "PropertyComponent" />
+          </div>
+        </wo:loop>
+        <div class = "buttons">
+          <wo name="Button" />
+          <wo:if condition = "$hasCancelPage"> <wo:localized value = "String.or" /> <wo:link action = "$cancelAction"><wo:localized value = "Link.cancel" /></wo:link>
+          </wo:if>
+        </div>
+    </webobject>
+</wo:WOSwitchComponent>

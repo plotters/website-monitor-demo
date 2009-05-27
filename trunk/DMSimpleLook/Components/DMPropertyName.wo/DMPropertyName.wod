@@ -1,0 +1,12 @@
+ContextDictionaryForPropertyKeyAllKeysSortAscToString: WORepetition {
+	list = contextDictionaryForPropertyKey.allKeys.@sortAsc.toString; //valid
+	item = currentKey;
+}
+
+CurrentKey: WOString {
+	value = currentKey;
+}
+
+CurrentValue: WOString {
+	value = currentValue;
+}

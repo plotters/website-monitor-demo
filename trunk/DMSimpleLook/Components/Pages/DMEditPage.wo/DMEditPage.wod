@@ -1,0 +1,22 @@
+ErrorPanel : DMErrorPanel {
+	errorMessages = errorMessages;
+	extraErrorMessage = errorMessage;
+}
+
+PropertyComponent : WOSwitchComponent {
+	WOComponentName = d2wContext.componentName;
+	localContext = d2wContext;
+	object = object;
+}
+
+Form : WOForm {
+  class = d2wContext.formCssClass;
+  action = submitAction;
+  enctype = "multipart/form-data";
+}
+
+Button : WOSwitchComponent {
+	WOComponentName = d2wContext.buttonComponentName;
+	value = d2wContext.saveButtonLabel;
+	action = submitAction;
+}

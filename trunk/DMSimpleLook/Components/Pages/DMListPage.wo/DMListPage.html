@@ -1,0 +1,36 @@
+<wo:WOSwitchComponent WOComponentName = "$d2wContext.innerPageWrapperName">
+<wo:ERDDebuggingHelp d2wContext = "$d2wContext" />
+<wo:if condition = "$displayGroup.displayedObjects.count">
+<table>
+<thead>
+<tr>
+	<wo:if condition = "$d2wContext.actions.left">
+		<th></th>
+	</wo:if>
+	<wo name="PropertyKeysRepetition">
+		<th class="$propertyCellClass">
+			<wo name = "SortOrder">
+				<wo:DMPropertyName localContext = "$d2wContext" />
+			</wo>
+		</th>
+	</wo>
+</tr>
+</thead>
+<wo name = "ObjectsRepetition">
+<tr class="$rowClass">
+	<wo:if condition = "$d2wContext.actions.left">
+		<wo:loop list = "$d2wContext.actions.left" item = "$propertyKey">
+			<td><wo name = "PropertyComponent" /></td>
+		</wo:loop>
+	</wo:if>
+	<wo name = "PropertyKeysRepetition">
+		<td class="$propertyCellClass">
+			<wo name = "PropertyComponent" />
+		</td>
+	</wo>
+</tr>
+</wo>
+</table>
+</wo:if>
+<wo:WOSwitchComponent WOComponentName = "$d2wContext.batchNavigationBarComponentName" displayGroup = "$displayGroup" />
+</wo:WOSwitchComponent>
