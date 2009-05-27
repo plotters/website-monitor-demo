@@ -1,0 +1,14 @@
+(
+	{ 
+		name = "Root";
+		children = ("Home", "Add Website");
+	},
+	{ 
+		name = "Home";
+		directActionName = "default";
+	},
+	{ 
+		name = "Add Website";
+		action = "session.handler.createWebsite";
+	},
+)
