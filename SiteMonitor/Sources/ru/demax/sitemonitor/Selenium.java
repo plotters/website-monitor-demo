@@ -12,6 +12,8 @@ public class Selenium extends SeleniumAction {
 	}
 	
 	public WOActionResults cleanupAction() {
+		new WebsiteBuilder().cleanup();
+		
 		return success();
 	}
 	

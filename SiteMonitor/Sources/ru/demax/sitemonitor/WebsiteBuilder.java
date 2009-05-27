@@ -19,4 +19,13 @@ public class WebsiteBuilder {
 		return website;
 	}
 
+	public void cleanup() {
+		EOEditingContext ec = ERXEC.newEditingContext();
+		Website website = Website.fetchWebsite(ec, Website.NAME.eq(name));
+		if (website != null) {
+			ec.deleteObject(website);
+			ec.saveChanges();
+		}
+	}
+
 }
