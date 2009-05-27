@@ -8,6 +8,9 @@ dbConnectPluginGLOBAL =
 dbConnectDriverGLOBAL =
 dbEOPrototypesEntityGLOBAL = EOJDBCMySQLPrototypes
 
+# Localizer
+er.extensions.ERXLocalizer.frameworkSearchPath = (app, DMSimpleLook, ERExtensions, ERDirectToWeb)
+
 # OGNL
 ognl.helperFunctions=true
 ognl.inlineBindings=true
