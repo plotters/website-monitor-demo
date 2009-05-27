@@ -1,0 +1,14 @@
+{
+    attributes = (
+        {allowsNull = N; name = id; prototypeName = id; }, 
+        {allowsNull = N; columnName = name; name = name; prototypeName = varchar100; }, 
+        {allowsNull = N; columnName = url; name = url; prototypeName = varchar1000; }
+    ); 
+    attributesUsedForLocking = (id, name, url); 
+    className = "ru.demax.sitemonitor.model.Website"; 
+    classProperties = (name, url); 
+    externalName = Website; 
+    fetchSpecificationDictionary = {}; 
+    name = Website; 
+    primaryKeyAttributes = (id); 
+}
