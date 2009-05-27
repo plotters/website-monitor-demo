@@ -1,5 +1,5 @@
 [x] View a list of websites.
-* Create a new website.
+[x] Create a new website.
 * Edit website. Validate input.
 * Check single website that is up.
 * Check single website that is down.
