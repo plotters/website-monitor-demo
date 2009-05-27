@@ -1,0 +1,12 @@
+|open|/wa/Selenium/cleanup||
+|assertTextPresent|succeeded||
+
+|open|/wa/||
+
+|clickAndWait|//a[contains(text(), 'Add Website')]||
+
+|type|xpath=//div[@id='name']//input|Google|
+|type|xpath=//div[@id='url']//input|http://www.google.com|
+|clickAndWait|//button[contains(text(), 'Save')]
+|assertTextPresent|Google||
+|assertTextPresent|http://www.google.com||
