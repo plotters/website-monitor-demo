@@ -23,4 +23,9 @@ public class Selenium extends SeleniumAction {
 		return success();
 	}
 
+	public WOActionResults listWithExampleWebsiteAction() {
+		new WebsiteBuilder().build();
+		
+		return Factory.factory().listWebsites(session());
+	}
 }
