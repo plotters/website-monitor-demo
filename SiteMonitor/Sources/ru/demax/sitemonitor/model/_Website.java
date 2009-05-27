@@ -1,4 +1,4 @@
-// $LastChangedRevision: 5773 $ DO NOT EDIT.  Make changes to Website.java instead.
+// $LastChangedRevision: 4733 $ DO NOT EDIT.  Make changes to Website.java instead.
 package ru.demax.sitemonitor.model;
 
 import com.webobjects.eoaccess.*;
@@ -8,15 +8,22 @@ import java.math.*;
 import java.util.*;
 import org.apache.log4j.Logger;
 
+import er.extensions.eof.*;
+import er.extensions.foundation.*;
+
 @SuppressWarnings("all")
-public abstract class _Website extends  EOGenericRecord {
-	public static final String ENTITY_NAME = "Website";
+public abstract class _Website extends  ERXGenericRecord {
+  public static final String ENTITY_NAME = "Website";
 
-	// Attributes
-	public static final String NAME_KEY = "name";
-	public static final String URL_KEY = "url";
+  // Attribute Keys
+  public static final ERXKey<String> NAME = new ERXKey<String>("name");
+  public static final ERXKey<String> URL = new ERXKey<String>("url");
+  // Relationship Keys
 
-	// Relationships
+  // Attributes
+  public static final String NAME_KEY = NAME.key();
+  public static final String URL_KEY = URL.key();
+  // Relationships
 
   private static Logger LOG = Logger.getLogger(_Website.class);
 
