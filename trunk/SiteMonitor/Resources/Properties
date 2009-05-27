@@ -11,6 +11,7 @@ dbEOPrototypesEntityGLOBAL = EOJDBCMySQLPrototypes
 # OGNL
 ognl.helperFunctions=true
 ognl.inlineBindings=true
+ognl.parseStandardTags=true
 
 # Misc
 er.extensions.stackTrace.cleanup=true
