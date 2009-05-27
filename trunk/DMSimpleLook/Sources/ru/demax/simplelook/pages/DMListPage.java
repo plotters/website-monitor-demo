@@ -15,7 +15,6 @@ public class DMListPage extends er.directtoweb.pages.ERD2WListPage {
 		super(context);
 	}
 	
-	@SuppressWarnings("unchecked")
 	@Override
 	// df: Default implementation uses empty array in case of sortOrdering == null
 	// which leads to resetting of fs's sortOrderings in setupPhase upon batch
