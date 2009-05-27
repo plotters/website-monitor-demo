@@ -39,6 +39,7 @@ public class Factory extends ERD2WFactory {
 		EOEditingContext ec = ERXEC.newEditingContext();
 		Website localWebsite = website.localInstanceIn(ec);
 		epi.setObject(localWebsite);
+		epi.setNextPage(session.context().page());
 		
 		return (WOComponent) epi;
 	}
