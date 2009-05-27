@@ -1,0 +1,17 @@
+|open|/wa/Selenium/cleanup||
+|assertTextPresent|succeeded||
+
+|open|/wa/Selenium/listWithExampleWebsite||
+
+|clickAndWait|//a[contains(text(), 'Edit')]
+|assertTextPresent|Name||
+
+|type|xpath=//div[@id='name']//input||
+|type|xpath=//div[@id='url']//input||
+|clickAndWait|//button[contains(text(), 'Save')]
+|assertTextPresent|Please provide a Name||
+|assertTextPresent|Please provide an Url||
+
+|type|xpath=//div[@id='url']//input|http://www.gmail.com|
+|clickAndWait|//button[contains(text(), 'Save')]
+|assertTextPresent|http://www.gmail.com||
