@@ -10,6 +10,7 @@ public class Application extends ERXApplication {
 	}
 
 	public Application() {
+		setDefaultRequestHandler(requestHandlerForKey(directActionRequestHandlerKey()));
 		D2W.setFactory(new Factory());
 	}
 }
