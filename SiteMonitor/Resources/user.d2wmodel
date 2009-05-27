@@ -1,4 +1,8 @@
 {
   "rules" = (
+    {"author" = "100"; "class" = "com.webobjects.directtoweb.Rule"; "lhs" = {"class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; "key" = "propertyKey"; "selectorName" = "isEqualTo"; "value" = "controllerAction"; }; "rhs" = {"class" = "com.webobjects.directtoweb.Assignment"; "keyPath" = "controllerButtonUIStyle"; "value" = "linkList"; }; }, 
+    {"author" = "100"; "class" = "com.webobjects.directtoweb.Rule"; "lhs" = {"class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; "key" = "entity.name"; "selectorName" = "isEqualTo"; "value" = "Website"; }; "rhs" = {"class" = "com.webobjects.directtoweb.Assignment"; "keyPath" = "actions"; "value" = {"left" = ("controllerAction"); }; }; }, 
+    {"author" = "100"; "class" = "com.webobjects.directtoweb.Rule"; "lhs" = {"class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; "key" = "propertyKey"; "selectorName" = "isEqualTo"; "value" = "controllerAction"; }; "rhs" = {"class" = "com.webobjects.directtoweb.Assignment"; "keyPath" = "componentName"; "value" = "ERDControllerButton"; }; }, 
+    {"author" = "100"; "class" = "com.webobjects.directtoweb.Rule"; "lhs" = {"class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; "key" = "entity.name"; "selectorName" = "isEqualTo"; "value" = "Website"; }; "rhs" = {"class" = "er.directtoweb.ERDDelayedObjectCreationAssignment"; "keyPath" = "pageController"; "value" = "ru.demax.sitemonitor.controllers.WebsiteController"; }; }
   ); 
 }
