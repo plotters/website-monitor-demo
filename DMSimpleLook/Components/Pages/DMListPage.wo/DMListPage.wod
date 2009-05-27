@@ -1,0 +1,25 @@
+PropertyKeysRepetition : WORepetition {
+	list = displayPropertyKeys;
+	item = propertyKey;
+}
+
+ObjectsRepetition : WORepetition {
+	list = displayGroup.displayedObjects;
+	item = d2wContext.object;
+	index = rowIndex;
+}
+
+PropertyComponent : WOSwitchComponent {
+	WOComponentName = d2wContext.componentName;
+	localContext = d2wContext;
+	object = d2wContext.object;
+}
+
+SortOrder : DMSortOrder {
+	disabled = d2wContext.propertyIsSortable;
+  	displayGroup = displayGroup;
+	displayKey = d2wContext.displayNameForProperty;
+	key = d2wContext.sortKeyForList;
+    d2wContext = d2wContext;
+	caseInsensitive = d2wContext.sortCaseInsensitive;
+}

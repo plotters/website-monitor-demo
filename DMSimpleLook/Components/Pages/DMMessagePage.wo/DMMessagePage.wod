@@ -1,0 +1,12 @@
+ExplanationComponent : WOSwitchComponent {
+	WOComponentName = d2wContext.explanationComponentName;
+	dataSource = dataSource;
+	object = object;
+	pageConfiguration = d2wContext.explanationConfigurationName;
+	id = d2wContext.explanationComponentId;
+}
+
+Button : WOSwitchComponent {
+	WOComponentName = d2wContext.buttonComponentName;
+	value = d2wContext.submitButtonLabel;
+}
