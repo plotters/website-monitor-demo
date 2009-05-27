@@ -1,6 +1,7 @@
 {
   "rules" = (
     {"author" = "0"; "class" = "com.webobjects.directtoweb.Rule"; "rhs" = {"class" = "com.webobjects.directtoweb.Assignment"; "keyPath" = "formCssClass"; "value" = "cssForm"; }; }, 
+    {"author" = "0"; "class" = "com.webobjects.directtoweb.Rule"; "rhs" = {"class" = "er.directtoweb.ERDDelayedLocalizedAssignment"; "keyPath" = "continueLinkLabel"; "value" = "Link.clickToContinue"; }; }, 
     {"author" = "0"; "class" = "com.webobjects.directtoweb.Rule"; "lhs" = {"class" = "com.webobjects.eocontrol.EOAndQualifier"; "qualifiers" = ({"class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; "key" = "task"; "selectorName" = "isEqualTo"; "value" = "edit"; }, {"class" = "com.webobjects.eocontrol.EOKeyValueQualifier"; "key" = "smartAttribute.className"; "selectorName" = "isEqualTo"; "value" = "java.lang.String"; }); }; "rhs" = {"class" = "com.webobjects.directtoweb.BooleanAssignment"; "keyPath" = "isEditString"; "value" = "true"; }; }, 
     {"author" = "10"; "class" = "com.webobjects.directtoweb.Rule"; "rhs" = {"class" = "com.webobjects.directtoweb.Assignment"; "keyPath" = "defaultSortOrdering"; }; }, 
     {"author" = "10"; "class" = "com.webobjects.directtoweb.Rule"; "rhs" = {"class" = "com.webobjects.directtoweb.Assignment"; "keyPath" = "buttonComponentName"; "value" = "DMButton"; }; }, 

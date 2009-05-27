@@ -1,5 +1,6 @@
 (
     0 : *true* => formCssClass = cssForm [com.webobjects.directtoweb.Assignment],
+    0 : *true* => continueLinkLabel = Link.clickToContinue [er.directtoweb.ERDDelayedLocalizedAssignment],
     0 : (task = 'edit' and smartAttribute.className = 'java.lang.String') => isEditString = true [com.webobjects.directtoweb.BooleanAssignment],
     10 : *true* => defaultSortOrdering = (null) [com.webobjects.directtoweb.Assignment],
     10 : *true* => buttonComponentName = DMButton [com.webobjects.directtoweb.Assignment],
