@@ -1,5 +1,7 @@
 package ru.demax.sitemonitor;
 
+import com.webobjects.directtoweb.D2W;
+
 import er.extensions.appserver.ERXApplication;
 
 public class Application extends ERXApplication {
@@ -8,7 +10,6 @@ public class Application extends ERXApplication {
 	}
 
 	public Application() {
-		ERXApplication.log.info("Welcome to " + name() + " !");
-		/* ** put your initialization code in here ** */
+		D2W.setFactory(new Factory());
 	}
 }
