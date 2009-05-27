@@ -1,0 +1,3 @@
+{
+	PageMessage.MessageSiteIsUp = "@@object.name@@ is up!";
+}
