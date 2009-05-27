@@ -1,0 +1,22 @@
+(
+    0 : *true* => formCssClass = cssForm [com.webobjects.directtoweb.Assignment],
+    0 : (task = 'edit' and smartAttribute.className = 'java.lang.String') => isEditString = true [com.webobjects.directtoweb.BooleanAssignment],
+    10 : *true* => defaultSortOrdering = (null) [com.webobjects.directtoweb.Assignment],
+    10 : *true* => buttonComponentName = DMButton [com.webobjects.directtoweb.Assignment],
+    10 : *true* => templateNameForListPage = DMListPage [com.webobjects.directtoweb.Assignment],
+    10 : *true* => templateNameForInspectPage = DMEditPage [com.webobjects.directtoweb.Assignment],
+    10 : *true* => templateNameForErrorPage = DMMessagePage [com.webobjects.directtoweb.Assignment],
+    10 : *true* => innerPageWrapperName = DMInnerPageWrapper [com.webobjects.directtoweb.Assignment],
+    10 : *true* => templateNameForConfirmPage = DMMessagePage [com.webobjects.directtoweb.Assignment],
+    10 : *true* => templateNameForMessagePage = DMMessagePage [com.webobjects.directtoweb.Assignment],
+    10 : *true* => batchNavigationBarComponentName = ERXFlickrBatchNavigation [com.webobjects.directtoweb.Assignment],
+    10 : componentName = 'DMEditPropertyLink' => hidePropertyName = true [com.webobjects.directtoweb.BooleanAssignment],
+    10 : *true* => templateNameForWizardCreationPage = templateNameForInspectPage [er.directtoweb.ERDKeyValueAssignment],
+    10 : pageConfiguration like 'ConfirmDelete*' => explanationComponentName = (null) [com.webobjects.directtoweb.Assignment],
+    10 : (task = 'message' or task = 'error' or task = 'confirm') => hasForm = false [com.webobjects.directtoweb.BooleanAssignment],
+    10 : (task = 'message' and explanationComponentName like '*InputExplanationComponent') => hasForm = true [com.webobjects.directtoweb.BooleanAssignment],
+    20 : (task = 'edit' and smartRelationship.destinationEntity.name = 'ERAttachment' and smartRelationship.isToMany = 0) => componentName = DMEditAttachment [com.webobjects.directtoweb.Assignment],
+    20 : (task = 'edit' and smartRelationship.destinationEntity.name = 'ERAttachment' and smartRelationship.isToMany = 1) => componentName = DMEditAttachments [com.webobjects.directtoweb.Assignment],
+    30 : ((task = 'list' or task = 'select' or task = 'inspect') and smartRelationship.destinationEntity.name = 'ERAttachment' and smartRelationship.isToMany = 0) => componentName = DMDisplayAttachmentLink [com.webobjects.directtoweb.Assignment],
+    60 : (task = 'message' or task = 'error') => entity = dummyEntity [er.directtoweb.ERDDelayedKeyValueAssignment]
+)
