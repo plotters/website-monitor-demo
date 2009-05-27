@@ -1,5 +1,13 @@
 WOPort = 55555
 
+# DB connection
+dbConnectURLGLOBAL = jdbc:mysql://localhost/SiteMonitor
+dbConnectUserGLOBAL = root
+dbConnectPasswordGLOBAL =
+dbConnectPluginGLOBAL =
+dbConnectDriverGLOBAL =
+dbEOPrototypesEntityGLOBAL = EOJDBCMySQLPrototypes
+
 # OGNL
 ognl.helperFunctions=true
 ognl.inlineBindings=true
@@ -17,8 +25,8 @@ er.extensions.ERXEnterpriseObject.updateInverseRelationships=true
 #dbConnectPasswordGLOBAL=
 
 # Migrations
-#er.migration.migrateAtStartup=true
-#er.migration.createTablesIfNecessary=true
+er.migration.migrateAtStartup=true
+er.migration.createTablesIfNecessary=true
 #er.migration.modelNames=YourModel
 
 # Misc Components
