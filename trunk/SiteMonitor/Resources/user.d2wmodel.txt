@@ -1,2 +1,7 @@
 (
+    100 : propertyKey = 'controllerAction' => controllerButtonUIStyle = linkList [com.webobjects.directtoweb.Assignment],
+    100 : entity.name = 'Website' => actions = {"left" = ("controllerAction"); 
+} [com.webobjects.directtoweb.Assignment],
+    100 : propertyKey = 'controllerAction' => componentName = ERDControllerButton [com.webobjects.directtoweb.Assignment],
+    100 : entity.name = 'Website' => pageController = ru.demax.sitemonitor.controllers.WebsiteController [er.directtoweb.ERDDelayedObjectCreationAssignment]
 )
