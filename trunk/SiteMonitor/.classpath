@@ -14,5 +14,10 @@
 	<classpathentry kind="con" path="WOFramework/JavaXML"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="WOFramework/ERSelenium"/>
+	<classpathentry kind="con" path="WOFramework/ERDirectToWeb"/>
+	<classpathentry kind="con" path="WOFramework/JavaEOProject"/>
+	<classpathentry kind="lib" path="Libraries/mysql-connector-java-5.1.7-bin.jar"/>
+	<classpathentry kind="con" path="WOFramework/JavaDirectToWeb"/>
+	<classpathentry kind="con" path="WOFramework/JavaDTWGeneration"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
