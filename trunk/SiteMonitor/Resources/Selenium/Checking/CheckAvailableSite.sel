@@ -1,0 +1,10 @@
+|open|/wa/Selenium/cleanup||
+|assertTextPresent|succeeded||
+
+|open|/wa/Selenium/listWithExampleWebsite||
+
+|clickAndWait|//a[contains(text(), 'Check')]||
+|assertTextPresent|Google is up!||
+
+|clickAndWait|link=Click here to continue.||
+|assertElementPresent|//a[contains(text(), 'Check')]||
