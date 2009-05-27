@@ -16,6 +16,7 @@
 	<classpathentry kind="con" path="WOFramework/ERSelenium"/>
 	<classpathentry kind="con" path="WOFramework/ERDirectToWeb"/>
 	<classpathentry kind="con" path="WOFramework/JavaEOProject"/>
+	<classpathentry kind="con" path="WOFramework/DMSimpleLook"/>
 	<classpathentry kind="lib" path="Libraries/mysql-connector-java-5.1.7-bin.jar"/>
 	<classpathentry kind="con" path="WOFramework/JavaDirectToWeb"/>
 	<classpathentry kind="con" path="WOFramework/JavaDTWGeneration"/>
