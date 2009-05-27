@@ -12,12 +12,17 @@ import com.webobjects.eocontrol.EODataSource;
 import com.webobjects.eocontrol.EOEditingContext;
 
 import er.directtoweb.ERD2WFactory;
+import er.extensions.appserver.ERXSession;
 import er.extensions.eof.ERXEC;
 
 public class Factory extends ERD2WFactory {
 
 	public static Factory factory() {
 		return (Factory) D2W.factory();
+	}
+
+	private WOSession session() {
+		return ERXSession.session();
 	}
 
 	public WOComponent listWebsites(WOSession session) {
@@ -45,6 +50,13 @@ public class Factory extends ERD2WFactory {
 		ec.saveChanges();
 		
 		return session.context().page();
+	}
+
+	public WOComponent createWebsite() {
+		EditPageInterface epi = editPageForNewObjectWithEntityNamed(Website.ENTITY_NAME, session());
+		epi.setNextPage(session().context().page());
+		
+		return (WOComponent) epi;
 	}
 
 	public WOComponent checkWebsite(WOSession session, Website website) {
