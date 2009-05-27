@@ -1,11 +1,11 @@
 |open|/wa/Selenium/cleanup||
 |assertTextPresent|succeeded||
 
-|open|/wa/Selenium/createTestWebsite||
+|open|/wa/Selenium/createExampleWebsite||
 |assertTextPresent|succeeded||
 
 |open|/wa/||
-|assertTextPresent|Test Website||
+|assertTextPresent|Google||
 |assertTextPresent|http://www.google.com||
 |assertElementPresent|//a[contains(text(), 'Edit')]
 |assertElementPresent|//a[contains(text(), 'Delete')]
