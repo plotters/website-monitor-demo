@@ -1,0 +1,82 @@
+form.cssForm {
+	text-align: left;
+}
+
+form.cssForm div {
+	clear: left;
+	display: block;
+	margin-bottom: 0.5em;
+}
+
+form.cssForm div label {
+	display: block;
+	float: left;
+	width: 130px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+form.cssForm div.isEditString label {
+	padding-top: 3px;
+}
+
+form.cssForm div input.inputText, 
+form.cssForm div input.inputPassword {
+	width: 150px;
+}
+
+form.cssForm div label.labelCheckbox {
+	float: none;
+	padding: 0;
+	text-align: left;
+	width: auto;
+}
+
+form.cssForm .buttons, 
+form.cssForm UL#DMErrorPanel, 
+form.cssForm .hidePropertyName,
+form.cssForm .multiLinePropertyComponent {
+	padding-left: 135px;
+}
+
+/* Hack to compensate 3px left margin of inputs in IE*/
+form.cssForm .buttons, 
+form.cssForm UL#DMErrorPanel, 
+form.cssForm .hidePropertyName,
+form.cssForm .multiLinePropertyComponent {
+	*padding-left: 138px;
+}
+
+.buttons,
+UL#DMErrorPanel {
+	margin: 1em 0;
+}
+
+UL#DMErrorPanel,
+.required {
+	color: #ED1C24;
+}
+
+ul#DMErrorPanel li {
+	list-style-type: none;
+	background: none;
+	padding-left: 0;
+}
+
+.DMEditPage, .DMMessagePage {
+	width: 380px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.DMListPage table {
+	width: 100%;
+}
+
+html .yui-button {
+	*vertical-align: middle; /*IE6 will bottom-align button and text after it otherwise*/
+}
+
+button {
+	margin: 0; /*margin is not reset in yui-reset version 2.4.1*/
+}
