@@ -36,7 +36,7 @@ public class WebsiteCheckerTest {
 		
 		WOComponent message = checker.check(session, website);
 		
-		assertThat(message, is(message));
+		assertThat(message, is(upMessage));
 	}
 	
 	@Test
