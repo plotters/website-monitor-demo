@@ -10,7 +10,7 @@
 |type|xpath=//div[@id='url']//input||
 |clickAndWait|//button[contains(text(), 'Save')]
 |assertTextPresent|Please provide a Name||
-|assertTextPresent|Please provide an Url||
+|assertTextPresent|Please provide a Url||
 
 |type|xpath=//div[@id='url']//input|http://www.gmail.com|
 |clickAndWait|//button[contains(text(), 'Save')]
