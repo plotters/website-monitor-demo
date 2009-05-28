@@ -1,6 +1,7 @@
 package ru.demax.sitemonitor.controllers;
 
 import ru.demax.sitemonitor.Factory;
+import ru.demax.sitemonitor.checking.WebsiteChecker;
 import ru.demax.sitemonitor.model.Website;
 
 import com.webobjects.appserver.WOComponent;
@@ -22,6 +23,6 @@ public class WebsiteController extends ERDBranchDelegate {
 	}
 	
 	public WOComponent check(WOComponent sender) {
-		return Factory.factory().checkWebsite(sender.session(), website(sender));
+		return new WebsiteChecker().check(sender.session(), website(sender));
 	}
 }

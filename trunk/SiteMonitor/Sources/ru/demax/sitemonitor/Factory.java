@@ -1,6 +1,5 @@
 package ru.demax.sitemonitor;
 
-import ru.demax.sitemonitor.checking.WebsiteChecker;
 import ru.demax.sitemonitor.model.Website;
 
 import com.webobjects.appserver.WOComponent;
@@ -17,7 +16,7 @@ import er.directtoweb.interfaces.ERDMessagePageInterface;
 import er.extensions.appserver.ERXSession;
 import er.extensions.eof.ERXEC;
 
-public class Factory extends ERD2WFactory {
+public class Factory extends ERD2WFactory implements WebsiteStatusPageFactory {
 
 	public static Factory factory() {
 		return (Factory) D2W.factory();
@@ -62,15 +61,17 @@ public class Factory extends ERD2WFactory {
 		return (WOComponent) epi;
 	}
 
-	public WOComponent checkWebsite(WOSession session, Website website) {
-		boolean isUp = new WebsiteChecker().isUp(website);
-		String pc = "MessageSiteIs" + (isUp ? "Up" : "Down");
+	public WOComponent upMessage(WOSession session, Website website) {
+		ERDMessagePageInterface mpi = (ERDMessagePageInterface) pageForConfigurationNamed("MessageSiteIsUp", session);
+		mpi.setNextPage(session.context().page());
+		mpi.setObject(website);
 		
-		ERDMessagePageInterface success = (ERDMessagePageInterface) pageForConfigurationNamed(pc, session);
-		success.setNextPage(session.context().page());
-		success.setObject(website);
-		
-		return (WOComponent) success;
+		return (WOComponent) mpi;
 	}
-	
+
+	public WOComponent downMessage(WOSession session, Website website) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
