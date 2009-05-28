@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="Sources"/>
+	<classpathentry kind="src" path="Tests"/>
 	<classpathentry kind="con" path="WOFramework/ERExtensions"/>
 	<classpathentry kind="con" path="WOFramework/ERJars"/>
 	<classpathentry kind="con" path="WOFramework/ERPrototypes"/>
@@ -18,6 +19,8 @@
 	<classpathentry kind="con" path="WOFramework/JavaEOProject"/>
 	<classpathentry kind="con" path="WOFramework/DMSimpleLook"/>
 	<classpathentry kind="lib" path="Libraries/mysql-connector-java-5.1.7-bin.jar"/>
+	<classpathentry kind="lib" path="Libraries/junit-4.4.jar"/>
+	<classpathentry kind="lib" path="Libraries/mockito-all-1.7.jar"/>
 	<classpathentry kind="con" path="WOFramework/JavaDirectToWeb"/>
 	<classpathentry kind="con" path="WOFramework/JavaDTWGeneration"/>
 	<classpathentry kind="output" path="bin"/>
