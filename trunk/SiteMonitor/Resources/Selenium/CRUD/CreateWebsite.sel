@@ -5,8 +5,8 @@
 
 |clickAndWait|//a[contains(text(), 'Add Website')]||
 
-|type|xpath=//div[@id='name']//input|Google|
-|type|xpath=//div[@id='url']//input|http://www.google.com|
+|type|xpath=//div[@id='name']//input|Apple|
+|type|xpath=//div[@id='url']//input|http://www.apple.com|
 |clickAndWait|//button[contains(text(), 'Save')]
-|assertTextPresent|Google||
-|assertTextPresent|http://www.google.com||
+|assertTextPresent|Apple||
+|assertTextPresent|http://www.apple.com||
