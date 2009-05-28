@@ -22,7 +22,7 @@ public class WebsiteChecker {
 	}
 
 	public WOComponent check(WOSession session, Website website) {
-		return urlChecker.isUp(website.url()) ? factory.upMessage(session, website) : null;
+		return urlChecker.isUp(website.url()) ? factory.upMessage(session, website) : factory.downMessage(session, website);
 	}
 
 }
