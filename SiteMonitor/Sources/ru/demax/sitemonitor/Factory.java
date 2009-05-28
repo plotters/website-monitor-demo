@@ -61,17 +61,21 @@ public class Factory extends ERD2WFactory implements WebsiteStatusPageFactory {
 		return (WOComponent) epi;
 	}
 
-	public WOComponent upMessage(WOSession session, Website website) {
-		ERDMessagePageInterface mpi = (ERDMessagePageInterface) pageForConfigurationNamed("MessageSiteIsUp", session);
+	private WOComponent statusMessage(WOSession session, Website website, boolean up) {
+		String prefix = up ? "Up" : "Down";
+		ERDMessagePageInterface mpi = (ERDMessagePageInterface) pageForConfigurationNamed("MessageSiteIs" + prefix, session);
 		mpi.setNextPage(session.context().page());
 		mpi.setObject(website);
 		
 		return (WOComponent) mpi;
 	}
 
+	public WOComponent upMessage(WOSession session, Website website) {
+		return statusMessage(session, website, true);
+	}
+
 	public WOComponent downMessage(WOSession session, Website website) {
-		// TODO Auto-generated method stub
-		return null;
+		return statusMessage(session, website, false);
 	}
 
 }
