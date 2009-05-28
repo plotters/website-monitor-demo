@@ -1,3 +1,4 @@
 {
 	PageMessage.MessageSiteIsUp = "@@object.name@@ is up!";
+	PageMessage.MessageSiteIsDown = "@@object.name@@ is down!";
 }
