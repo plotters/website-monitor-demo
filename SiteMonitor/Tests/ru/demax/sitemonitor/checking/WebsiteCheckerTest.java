@@ -45,7 +45,9 @@ public class WebsiteCheckerTest {
 		when(urlChecker.isUp(url)).thenReturn(false);
 		when(factory.downMessage(session, website)).thenReturn(downMessage);
 		
-		assertThat(checker.check(session, website), is(downMessage));
+		WOComponent message = checker.check(session, website);
+		
+		assertThat(message, is(downMessage));
 	}
 
 }
