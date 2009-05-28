@@ -1,5 +1,8 @@
 package ru.demax.sitemonitor;
 
+import ru.demax.sitemonitor.checking.WebsiteChecker;
+import ru.demax.sitemonitor.model.Website;
+
 import com.webobjects.appserver.WOActionResults;
 import com.webobjects.appserver.WORequest;
 
@@ -27,5 +30,11 @@ public class Selenium extends SeleniumAction {
 		new WebsiteBuilder().build();
 		
 		return Factory.factory().listWebsites(session());
+	}
+	
+	public WOActionResults checkSiteWithRedirectAction() {
+		Website website = new WebsiteBuilder().withRedirectingUrl().build();
+		
+		return new WebsiteChecker().check(session(), website);
 	}
 }

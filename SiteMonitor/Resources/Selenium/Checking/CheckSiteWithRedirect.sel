@@ -1,0 +1,5 @@
+|open|/wa/Selenium/cleanup||
+|assertTextPresent|succeeded||
+
+|open|/wa/Selenium/checkSiteWithRedirect||
+|assertTextPresent|Apple is down!||
