@@ -2,5 +2,6 @@
 [x] Create a new website.
 [x] Edit website. Validate input.
 * Check single website that is up.
+* Check single website that redirects to another url.
 * Check single website that is down.
 * Periodic checks.
