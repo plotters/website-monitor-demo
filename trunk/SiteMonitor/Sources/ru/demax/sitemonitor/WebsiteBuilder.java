@@ -8,8 +8,17 @@ import er.extensions.eof.ERXEC;
 
 public class WebsiteBuilder {
 
-	private String name = "Google";
-	private String url = "http://www.google.com";
+	private String name = "Apple";
+	private String url = "http://www.apple.com";
+
+	public void cleanup() {
+		EOEditingContext ec = ERXEC.newEditingContext();
+		Website website = Website.fetchWebsite(ec, Website.NAME.eq(name));
+		if (website != null) {
+			ec.deleteObject(website);
+			ec.saveChanges();
+		}
+	}
 
 	public Website build() {
 		EOEditingContext ec = ERXEC.newEditingContext();
@@ -19,13 +28,10 @@ public class WebsiteBuilder {
 		return website;
 	}
 
-	public void cleanup() {
-		EOEditingContext ec = ERXEC.newEditingContext();
-		Website website = Website.fetchWebsite(ec, Website.NAME.eq(name));
-		if (website != null) {
-			ec.deleteObject(website);
-			ec.saveChanges();
-		}
+	public WebsiteBuilder withRedirectingUrl() {
+		url = "http://apple.com";
+		
+		return this;
 	}
 
 }
