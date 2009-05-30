@@ -18,7 +18,7 @@ public class WebsiteChecker {
 	}
 
 	public WebsiteChecker() {
-		this(Factory.factory(), new HTTPStatusChecker());
+		this(Factory.smFactory(), new HTTPStatusChecker());
 	}
 
 	public WOComponent check(WOSession session, Website website) {

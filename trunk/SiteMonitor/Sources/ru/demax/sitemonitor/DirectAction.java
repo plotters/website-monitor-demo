@@ -12,6 +12,6 @@ public class DirectAction extends ERXDirectAction {
 
 	@Override
 	public WOActionResults defaultAction() {
-		return Factory.factory().listWebsites(session());
+		return Factory.smFactory().listWebsites(session());
 	}
 }

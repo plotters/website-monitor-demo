@@ -29,11 +29,11 @@ public class Selenium extends SeleniumAction {
 	public WOActionResults listWithExampleWebsiteAction() {
 		new WebsiteBuilder().build();
 		
-		return Factory.factory().listWebsites(session());
+		return Factory.smFactory().listWebsites(session());
 	}
 	
 	public WOActionResults checkSiteWithRedirectAction() {
-		Website website = new WebsiteBuilder().withRedirectingUrl().build();
+		Website website = new WebsiteBuilder().withUrl("http://apple.com").build();
 		
 		return new WebsiteChecker().check(session(), website);
 	}
