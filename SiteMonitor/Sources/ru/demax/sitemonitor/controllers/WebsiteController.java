@@ -18,10 +18,6 @@ public class WebsiteController extends ERDBranchDelegate {
 		return Factory.factory().editWebsite(sender.session(), website(sender));
 	}
 
-	public WOComponent delete(WOComponent sender) {
-		return Factory.factory().deleteWebsite(sender.session(), website(sender));
-	}
-	
 	public WOComponent check(WOComponent sender) {
 		return new WebsiteChecker().check(sender.session(), website(sender));
 	}
