@@ -1,10 +1,10 @@
 <wo:if condition="$hasErrors">
 	<ul id="DMErrorPanel">
-		<wo:WORepetition list="$errorKeys" item="$errorKey">
-			<li><wo:str value = "$errorMessageItem" escapeHTML = "false"/></li>
-		</wo:WORepetition>
+		<wo:loop list="$errorKeys" item="$errorKey">
+			<li><wo:str value = "$errorMessageItem" escapeHTML = "$false"/></li>
+		</wo:loop>
 		<wo:if condition="$extraErrorMessage.length">
-			<li><wo:ERXLocalizedString value="$extraErrorMessage" /></li>
+			<li><wo:localized value="$extraErrorMessage" /></li>
 		</wo:if>
 	</ul>
 </wo:if>
