@@ -17,7 +17,7 @@ public class HTTPStatusChecker implements UrlAvailabilityChecker {
 	public boolean isUp(String url) {
 		int status = statusFetcher.fetch(url);
 		
-		return status == HttpURLConnection.HTTP_OK ? true : false;
+		return status == HttpURLConnection.HTTP_OK;
 	}
 
 }

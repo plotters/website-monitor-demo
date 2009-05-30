@@ -8,10 +8,9 @@ import java.net.URL;
 public class HTTPStatusFetcher implements StatusFetcher {
 
 	public int fetch(String spec) {
-		HttpURLConnection connection;
 		try {
 			URL url = new URL(spec);
-			connection = (HttpURLConnection) url.openConnection();
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setInstanceFollowRedirects(false);
 			
 			return connection.getResponseCode();
