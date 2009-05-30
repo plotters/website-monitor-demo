@@ -8,5 +8,4 @@
 |assertTextPresent|Apple||
 |assertTextPresent|http://www.apple.com||
 |assertElementPresent|//a[contains(text(), 'Edit')]
-|assertElementPresent|//a[contains(text(), 'Delete')]
 |assertElementPresent|//a[contains(text(), 'Check')]

@@ -45,15 +45,6 @@ public class Factory extends ERD2WFactory implements WebsiteStatusPageFactory {
 		return (WOComponent) epi;
 	}
 
-	public WOComponent deleteWebsite(WOSession session, Website website) {
-		EOEditingContext ec = ERXEC.newEditingContext();
-		Website localWebsite = website.localInstanceIn(ec);
-		ec.deleteObject(localWebsite);
-		ec.saveChanges();
-		
-		return session.context().page();
-	}
-
 	public WOComponent createWebsite() {
 		EditPageInterface epi = editPageForNewObjectWithEntityNamed(Website.ENTITY_NAME, session());
 		epi.setNextPage(session().context().page());
