@@ -6,6 +6,11 @@ import com.webobjects.eocontrol.EOEditingContext;
 
 import er.extensions.eof.ERXEC;
 
+/**
+ * Simplistic implementation of a Test Data Builder pattern - http://mockobjects.com/book/test-data-builder.html
+ * 
+ * @author dfrolov
+ */
 public class WebsiteBuilder {
 
 	private String name = "Apple";
@@ -24,13 +29,11 @@ public class WebsiteBuilder {
 		EOEditingContext ec = ERXEC.newEditingContext();
 		Website website = Website.createWebsite(ec, name, url);
 		ec.saveChanges();
-		
 		return website;
 	}
 
-	public WebsiteBuilder withRedirectingUrl() {
-		url = "http://apple.com";
-		
+	public WebsiteBuilder withUrl(String url) {
+		this.url = url;
 		return this;
 	}
 

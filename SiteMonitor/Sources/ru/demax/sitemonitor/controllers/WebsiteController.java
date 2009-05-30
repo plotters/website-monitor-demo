@@ -15,7 +15,7 @@ public class WebsiteController extends ERDBranchDelegate {
 	}
 
 	public WOComponent edit(WOComponent sender) {
-		return Factory.factory().editWebsite(sender.session(), website(sender));
+		return Factory.smFactory().editWebsite(sender.session(), website(sender));
 	}
 
 	public WOComponent check(WOComponent sender) {

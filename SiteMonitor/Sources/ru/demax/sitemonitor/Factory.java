@@ -18,7 +18,7 @@ import er.extensions.eof.ERXEC;
 
 public class Factory extends ERD2WFactory implements WebsiteStatusPageFactory {
 
-	public static Factory factory() {
+	public static Factory smFactory() {
 		return (Factory) D2W.factory();
 	}
 
