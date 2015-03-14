@@ -1,0 +1,1 @@
+Application was used as a demo project for WOWODC 09 "Test-Driven Development with WebObjects" talk by Denis Frolov. It showcases usage of D2W, ERDirectToWeb, custom D2W Factory, custom look framework, page controller, ERXNavigationBar, Selenium, unit, and mock tests.
